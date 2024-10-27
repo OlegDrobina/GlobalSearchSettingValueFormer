@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+  const buttonEl = document.getElementById("processInputData");
+  if (buttonEl) {
+    buttonEl.addEventListener("click", (event) => {
+      event.stopPropagation();
+      processReceivedObject();
+    });
+  }
+});
+
 function processReceivedObject() {
   const passedString = document.getElementById("metadataBody").value;
   const isJsonValue = isJson(passedString);
@@ -35,18 +45,9 @@ function internalCheckForProperties(passedStringJson) {
 
 function internalExecute(passedStringJson) {
   const columnObjectsArray = passedStringJson.MetaData.Schema.Columns;
-  let columnNames = columnObjectsArray
-    .map(function (item) {
-      return item.Name;
-    })
-    .filter(excludeIdNameColumns);
+  const columnNames = columnObjectsArray
+    .map((item) => item.Name)
+    .filter((item) => item != "Id" && item != "Name");
   const columnNamesJoined = `"${columnNames.join('","')}"`;
   document.getElementById("resultBody").value = columnNamesJoined;
-}
-
-function excludeIdNameColumns(passedArrayElement) {
-  if (passedArrayElement == "Id" || passedArrayElement == "Name") {
-    return false;
-  }
-  return true;
 }
