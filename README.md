@@ -4,7 +4,7 @@ INSTRUCTION:
 
 1. Place the files into any directory in your local PC
 2. Open index.html file (this will open the page in the browser)
-3. Input the needed object name into the "Input object name to process" field (for example we need to modify the system setting value for the "Product" object then we need to specify "Product" in the field).
+3. Input the needed object name (code, like UsrAccountTest) into the "Input object name to process" field (for example we need to modify the system setting value for the "Product" object then we need to specify "Product" in the field).
 4. Copy the current value of the "GlobalSearchIndexedDataConfig" system setting into the "GlobalSearchIndexedDataConfig original value:" field.
    IMPORTANT!!: backup the current value somewhere, for example paste it into the "Description" column of the system setting in the application of the customer.
 5. Open the metadata of the needed object from the "Custom" package (or from the last package in the hierarchy).
@@ -13,7 +13,7 @@ INSTRUCTION:
 8. Hit the "Process" button.
 9. Wait for the value to appear in the "Result:" field.
 10. Verify the received value from step 9 in the site link to which is provided in the "Please validate the result using this link" message.
-11. Use the value from the "Result:" field as a new value for the "GlobalSearchIndexedDataConfig" system setting.
+11. Use the value from the "Result:" field as a new value for the "GlobalSearchIndexedDataConfig" system setting (but don't forget to modify it in accordance with the customer's requirements to the list of columns that should remain in the setting).
 
 IMPROVEMENTS:
 
