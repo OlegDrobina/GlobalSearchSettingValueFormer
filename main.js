@@ -199,6 +199,26 @@ function formIgnoredColumns(passedObj) {
   const columnObjectsArray = passedObj.MetaData.Schema.Columns;
   const columnNames = columnObjectsArray
     .map((item) => item.Name)
-    .filter((item) => item != "Id" && item != "Name");
+    .filter(ignoredColumnsFiltration);
   return columnNames;
+}
+
+function getIgnoredColumns() {
+  const ignoredColumnsEl = document.getElementById("columnsToBeLeft");
+  const ignoredColumns = ignoredColumnsEl.value;
+  return ignoredColumns;
+}
+
+function getHasIgnoredColumns() {
+  const ignoredColumns = getIgnoredColumns();
+  return ignoredColumns.length != 0;
+}
+
+function ignoredColumnsFiltration(item) {
+  if (getHasIgnoredColumns()) {
+    const ignoredColumns = getIgnoredColumns();
+    return item != "Id" && item != "Name" && !ignoredColumns.includes(item);
+  } else {
+    return item != "Id" && item != "Name";
+  }
 }

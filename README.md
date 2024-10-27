@@ -10,10 +10,11 @@ INSTRUCTION:
 5. Open the metadata of the needed object from the "Custom" package (or from the last package in the hierarchy).
 6. Copy the value from the "Metadata (Read-Only)" section of the metadata.
 7. Paste the value from step 6 into the "Paste metadata (read-only) here:" field.
-8. Hit the "Process" button.
-9. Wait for the value to appear in the "Result:" field.
-10. Verify the received value from step 9 in the site link to which is provided in the "Please validate the result using this link" message.
-11. Use the value from the "Result:" field as a new value for the "GlobalSearchIndexedDataConfig" system setting (but don't forget to modify it in accordance with the customer's requirements to the list of columns that should remain in the setting).
+8. Specify columns that shouldn't be included to the system setting in the "Columns that should be left:" columns using a comma separator (example: UsrTest1, UsrTest2, UsrTest3). If the column value is empty - "Id" and "Name" columns won't be added to the result system setting by default.
+9. Hit the "Process" button.
+10. Wait for the value to appear in the "Result:" field.
+11. Verify the received value from step 9 in the site link to which is provided in the "Please validate the result using this link" message.
+12. Use the value from the "Result:" field as a new value for the "GlobalSearchIndexedDataConfig" system setting (but don't forget to modify it in accordance with the customer's requirements to the list of columns that should remain in the setting).
 
 IMPROVEMENTS:
 
