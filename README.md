@@ -1,9 +1,26 @@
-1) Розпакувати десь
-2) Відкрити файл index.html
-3) У системі користувача відкрити метадані потрібного об'єкту з пакету, останнього по ієрархії (Custom наприклад)
-4) У метаданих відкрити вкладку Metadata (Read-Only) і скопіювати увесь вміст
-5) Вставити в поле зі скріна (Paste metadata (read-only) here)
-6) Тицьнути на кнопку Process
-7) У полі Result з'явиться строка в лапках через кому, в яких будуть всі колонки об'єкту крім Id та Name
+UPDATED VERSION OF THE GLOBAL SEARCH SYSTEM SETTING FORMER
 
-А далі редагуєте цю строку, як попросив клієнт і потім вставляєте в настройку. Якщо в метаданих десь щось не те, сторінка про це скаже.
+INSTRUCTION:
+
+1. Place the files into any directory in your local PC
+2. Open index.html file (this will open the page in the browser)
+3. Input the needed object name into the "Input object name to process" field (for example we need to modify the system setting value for the "Product" object then we need to specify "Product" in the field).
+4. Copy the current value of the "GlobalSearchIndexedDataConfig" system setting into the "GlobalSearchIndexedDataConfig original value:" field.
+   IMPORTANT!!: backup the current value somewhere, for example paste it into the "Description" column of the system setting in the application of the customer.
+5. Open the metadata of the needed object from the "Custom" package (or from the last package in the hierarchy).
+6. Copy the value from the "Metadata (Read-Only)" section of the metadata.
+7. Paste the value from step 6 into the "Paste metadata (read-only) here:" field.
+8. Hit the "Process" button.
+9. Wait for the value to appear in the "Result:" field.
+10. Verify the received value from step 9 in the site link to which is provided in the "Please validate the result using this link" message.
+11. Use the value from the "Result:" field as a new value for the "GlobalSearchIndexedDataConfig" system setting.
+
+IMPROVEMENTS:
+
+1. There is no need to manually modify the existing "GlobalSearchIndexedDataConfig" system setting value (string itself, not the system setting value in the customer's application). The utility will do it automatically.
+2. If the "Input object name to process" field has empty spaces left by accident before or after the text that is input - the utility will remove it.
+3. Verification link is added to the utility.
+
+PLANS FOR ADDITIONAL IMPROVEMENTS:
+
+1. Add additional fields where cookies container can be pasted so that the value for the system setting in the customer's app would be automatically updated once the "Process" button is pressed.
