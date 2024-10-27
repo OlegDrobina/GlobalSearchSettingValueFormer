@@ -9,8 +9,15 @@ label {
     font-weight: bold;
 }
 
-button {
+#processInputData {
     background-color: green;
+    color: white;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+#copyProcessedData {
+    background-color: blue;
     color: white;
     text-align: center;
     padding: 5px 20px;

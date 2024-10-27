@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const buttonEl = document.getElementById("processInputData");
-  if (buttonEl) {
-    buttonEl.addEventListener("click", (event) => {
+  const processDataButtonEl = document.getElementById("processInputData");
+  const copyDataButtonEl = document.getElementById("copyProcessedData");
+  if (processDataButtonEl) {
+    processDataButtonEl.addEventListener("click", (event) => {
       event.stopPropagation();
       processReceivedData();
+    });
+  }
+  if (copyDataButtonEl) {
+    copyDataButtonEl.addEventListener("click", function (event) {
+      event.stopPropagation();
+      const resultBodyEl = document.getElementById("resultBody");
+      navigator.clipboard.writeText(resultBodyEl.value);
     });
   }
 });

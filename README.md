@@ -15,6 +15,7 @@ INSTRUCTION:
 10. Wait for the value to appear in the "Result:" field.
 11. Verify the received value from step 9 in the site link to which is provided in the "Please validate the result using this link" message.
 12. Use the value from the "Result:" field as a new value for the "GlobalSearchIndexedDataConfig" system setting (but don't forget to modify it in accordance with the customer's requirements to the list of columns that should remain in the setting).
+13. You can also use the "Copy" button to copy the content of the "Result:" field to the clipboard.
 
 IMPROVEMENTS:
 
