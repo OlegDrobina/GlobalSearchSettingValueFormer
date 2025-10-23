@@ -89,11 +89,11 @@ function getSysSettingOrigValue() {
 }
 
 function beautifyPassedSysSettingValue(value) {
-  const beautifiedValue = value.replaceAll("\t", "");
-  /*
-    Commented since not needed in modern browsers
-  */
-  //.replaceAll("IgnoredColumns", '"IgnoredColumns"');
+  let beautifiedValue = value.replaceAll("\t", "");
+  beautifiedValue = beautifiedValue.replaceAll(
+    "IgnoredColumns",
+    '"IgnoredColumns"'
+  );
   return beautifiedValue;
 }
 
